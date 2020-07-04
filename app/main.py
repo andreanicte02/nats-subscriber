@@ -5,7 +5,7 @@ import json
 
 def insert(data= '{"Nombre": "Jimmixxx Dalton","Departamento": "Chiquimula","Edad": 66,"Forma de contagio": "Comunitario","Estado": "Recuperado"  }'):
 
-    client = pymongo.MongoClient("mongodb://0.0.0.0", port=27017)
+    client = pymongo.MongoClient("mongodb://0.0.0.0", port=0000)
     db = client.DB_SP1_P2_201314716
     dataJson = json.loads(data)
     db.Covid.insert_one({"Nombre":dataJson['Nombre'], "Departamento": dataJson['Departamento'], "Edad":dataJson['Edad'], "Forma de contagio" : dataJson['Forma de contagio'], "Estado": dataJson['Estado']}).inserted_id
